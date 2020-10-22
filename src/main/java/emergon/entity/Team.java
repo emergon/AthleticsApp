@@ -20,7 +20,7 @@ public class Team implements Serializable{
     @Column(name = "id")
     private int id;
     private String sport;
-    @OneToMany
+    @OneToMany(mappedBy = "team")
     private List<Athlete> athletes;
 
     public Team() {
